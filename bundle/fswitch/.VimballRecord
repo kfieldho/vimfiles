@@ -1,0 +1,1 @@
+FSwitch.vba: call delete('/Users/kfieldho/.vim/plugin/fswitch.vim')|call delete('/Users/kfieldho/.vim/doc/fswitch.txt')
