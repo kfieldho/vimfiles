@@ -4,3 +4,9 @@
 [submodule "bundle/lusty"]
 	path = bundle/lusty
 	url = http://github.com/sjbach/lusty.git
+[submodule "bundle/Command-T"]
+	path = bundle/Command-T
+	url = http://github.com/wincent/Command-T.git
+[submodule "bundle/taskpaper"]
+	path = bundle/taskpaper
+	url = http://github.com/davidoc/taskpaper.vim.git
