@@ -4,3 +4,4 @@ call pathogen#helptags()
 filetype plugin indent on
   
 set hidden          " Allow unsaved buffers
+let g:LustyExplorerSuppressRubyWarning = 1

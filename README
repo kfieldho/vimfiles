@@ -1,0 +1,5 @@
+This vim directory is based on pathogen.
+
+There are a number of git submodules (use git the git submodule command to see them). Remember to use git submodule --update --init when setting up a new system.
+
+The file vimrc is meant to be used as ~/.vimrc  A symbolic link usually suffices.
