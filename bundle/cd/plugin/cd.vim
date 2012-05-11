@@ -1,2 +1,2 @@
+autocmd BufEnter * silent! lcd %:p:h
 
-au   BufEnter *   execute ":lcd " . expand("%:p:h") 
