@@ -1,4 +1,7 @@
 filetype off
+
+let g:pathogen_disabled = []
+
 call pathogen#runtime_append_all_bundles() 
 call pathogen#helptags()
 filetype plugin indent on
