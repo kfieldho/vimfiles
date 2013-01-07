@@ -26,3 +26,5 @@ let mapleader = ","
 
 " Kill trailing whitespace with ,W
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>h :tabp<CR>
+nnoremap <leader>l :tabn<CR>
