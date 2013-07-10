@@ -28,3 +28,5 @@ let mapleader = ","
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>h :tabp<CR>
 nnoremap <leader>l :tabn<CR>
+nnoremap H :tabp<CR>
+nnoremap L :tabn<CR>
