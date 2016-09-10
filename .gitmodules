@@ -28,3 +28,6 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/table-mode"]
+	path = bundle/table-mode
+	url = git@github.com:dhruvasagar/vim-table-mode.git

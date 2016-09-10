@@ -34,3 +34,9 @@ nnoremap L :tabn<CR>
 " Enable XML folding
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+
+"  We'll make our table_mode table reST compatible
+let g:table_mode_corner_corner="+"
+let g:table_mode_header_fillchar="="
+
+set encoding=utf8
