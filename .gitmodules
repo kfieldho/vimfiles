@@ -34,3 +34,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "bundle/vim-ros"]
+	path = bundle/vim-ros
+	url = https://github.com/taketwo/vim-ros.git

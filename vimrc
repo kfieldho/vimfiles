@@ -7,6 +7,9 @@ else
 endif
 
 let g:pathogen_disabled = []
+"  Comment the following line out on systems with ROS installed
+call add(g:pathogen_disabled,'vim-ros')
+
 set t_Co=256
 
 call pathogen#runtime_append_all_bundles()
@@ -20,6 +23,8 @@ map Y y$
 syntax enable
 colorscheme solarized
 
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 let mapleader = ","
