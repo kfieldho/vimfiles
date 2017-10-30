@@ -14,10 +14,17 @@ set t_Co=256
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+execute pathogen#infect()
+
 filetype plugin indent on
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
 
 set hidden          " Allow unsaved buffers
 let g:LustyExplorerSuppressRubyWarning = 1
+
 
 map Y y$
 syntax enable
@@ -44,4 +51,23 @@ au FileType xml setlocal foldmethod=syntax
 let g:table_mode_corner_corner="+"
 let g:table_mode_header_fillchar="="
 
+" Configure CTRL-P Plugin
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_rust_checkers = ['cargo']
+
 set encoding=utf8
+
+"  Show Trailing Whitespace
+highlight ShowTrailingWhitespace ctermbg=Red guibg=Red

@@ -37,3 +37,12 @@
 [submodule "bundle/vim-ros"]
 	path = bundle/vim-ros
 	url = https://github.com/taketwo/vim-ros.git
+[submodule "bundle/ShowTrailingWhitespace"]
+	path = bundle/ShowTrailingWhitespace
+	url = https://github.com/vim-scripts/ShowTrailingWhitespace.git
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
