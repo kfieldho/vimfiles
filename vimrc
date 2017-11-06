@@ -9,6 +9,8 @@ endif
 let g:pathogen_disabled = []
 "  Comment the following line out on systems with ROS installed
 call add(g:pathogen_disabled,'vim-ros')
+call add(g:pathogen_disabled,'aedit')
+call add(g:pathogen_disabled,'ctrlp')
 
 set t_Co=256
 
@@ -38,14 +40,27 @@ let mapleader = ","
 
 " Kill trailing whitespace with ,W
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
+" Tab Navigation
 nnoremap <leader>h :tabp<CR>
 nnoremap <leader>l :tabn<CR>
 nnoremap H :tabp<CR>
 nnoremap L :tabn<CR>
 
+" Pane Navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
+
+
 " Enable XML folding
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+
+au BufNewFile,BufRead *.nfo set filetype=nfo
 
 "  We'll make our table_mode table reST compatible
 let g:table_mode_corner_corner="+"
