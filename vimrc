@@ -86,3 +86,13 @@ set encoding=utf8
 
 "  Show Trailing Whitespace
 highlight ShowTrailingWhitespace ctermbg=Red guibg=Red
+
+set rtp+=$HOME/.fzf
+" Add a Rg command to fzf.vim
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
