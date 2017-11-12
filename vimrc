@@ -6,6 +6,8 @@ else
 	set background=dark
 endif
 
+set updatetime=250
+
 let g:pathogen_disabled = []
 "  Comment the following line out on systems with ROS installed
 call add(g:pathogen_disabled,'vim-ros')
