@@ -86,6 +86,15 @@ let g:syntastic_rust_checkers = ['cargo']
 
 set encoding=utf8
 
+" Configure FSwitch
+au! BufEnter *.cpp let b:fswitchdst = 'hpp,h,hxx'
+au! BufEnter *.cc let b:fswitchdst = 'hpp,h,hxx' | let b:fswitchlocs = './'
+au! BufEnter *.cxx let b:fswitchdst = 'hpp,h,hxx' | let b:fswitchlocs = './'
+au! BufEnter *.h let b:fswitchdst = 'cpp,cxx,cc,c' | let b:fswitchlocs = './'
+au! BufEnter *.hpp let b:fswitchdst = 'cpp,cxx,cc,c' | let b:fswitchlocs = './'
+au! BufEnter *.hxx let b:fswitchdst = 'cpp,cxx,cc,c' | let b:fswitchlocs = './'
+nnoremap <leader>s :FSHere<CR>
+
 "  Show Trailing Whitespace
 highlight ShowTrailingWhitespace ctermbg=Red guibg=Red
 
