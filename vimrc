@@ -49,6 +49,17 @@ nnoremap <leader>l :tabn<CR>
 nnoremap H :tabp<CR>
 nnoremap L :tabn<CR>
 
+" Set paste
+nnoremap <leader>p :set paste
+
+"NERDTree 
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+
+"Buffers and Files
+nnoremap <leader>B :Buffers<CR>
+nnoremap <leader>F :Files<CR>
+
 " Pane Navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
