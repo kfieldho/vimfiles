@@ -11,7 +11,6 @@ set updatetime=250
 let g:pathogen_disabled = []
 "  Comment the following line out on systems with ROS installed
 call add(g:pathogen_disabled,'vim-ros')
-call add(g:pathogen_disabled,'aedit')
 call add(g:pathogen_disabled,'ctrlp')
 
 set t_Co=256
