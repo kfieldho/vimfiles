@@ -40,6 +40,9 @@ set expandtab
 
 let mapleader = ","
 
+" LSP
+nnoremap <leader>D :LspDefinition<CR>
+
 " Kill trailing whitespace with ,W
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
@@ -50,9 +53,9 @@ nnoremap H :tabp<CR>
 nnoremap L :tabn<CR>
 
 " Set paste
-nnoremap <leader>p :set paste
+nnoremap <leader>p :set paste<CR>
 
-"NERDTree 
+"NERDTree
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
@@ -88,6 +91,23 @@ let g:ctrlp_working_path_mode = 'ra'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" LSP
+if executable('clangd-mp-6.0')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'clangd',
+        \ 'cmd': {server_info->['clangd-mp-6.0']},
+        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cxx', 'h', 'hpp', 'hxx'],
+        \ })
+endif
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'whitelist': ['python'],
+        \ })
+endif
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
