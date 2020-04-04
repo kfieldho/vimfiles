@@ -13,6 +13,7 @@ let g:pathogen_disabled = []
 call add(g:pathogen_disabled,'syntastic')
 call add(g:pathogen_disabled,'vim-ros')
 call add(g:pathogen_disabled,'ctrlp')
+call add(g:pathogen_disabled,'lusty')
 
 set t_Co=256
 
@@ -40,6 +41,8 @@ set expandtab
 
 let mapleader = ","
 
+nnoremap <leader>o :only<CR>
+
 " LSP
 nnoremap <leader>D :LspDefinition<CR>
 
@@ -53,11 +56,12 @@ nnoremap H :tabp<CR>
 nnoremap L :tabn<CR>
 
 " Set paste
-nnoremap <leader>p :set paste<CR>
+nnoremap <leader>p :set paste<CR>o
 
 "NERDTree
-nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>t :TlistToggle<CR>
 
 "Buffers and Files
 nnoremap <leader>B :Buffers<CR>
@@ -70,6 +74,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
+
+" Keep selection after shifts
+vnoremap < <gv
+vnoremap > >gv
+
 
 
 " Enable XML folding
@@ -116,6 +125,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_rust_checkers = ['cargo']
 
 set encoding=utf8
+
+" Taglist
+let g:Tlist_Use_Horiz_Window=1
 
 " Configure FSwitch
 au! BufEnter *.cpp let b:fswitchdst = 'hpp,h,hxx'

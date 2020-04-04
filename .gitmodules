@@ -79,3 +79,12 @@
 [submodule "bundle/vim-lsp"]
 	path = bundle/vim-lsp
 	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "bundle/conflicted"]
+	path = bundle/conflicted
+	url = https://github.com/christoomey/vim-conflicted.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/renamer"]
+	path = bundle/renamer
+	url = https://github.com/qpkorr/vim-renamer.git
